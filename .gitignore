@@ -1,0 +1,4 @@
+# Basic Intellij Files And Folders
+.idea
+out
+*.iml

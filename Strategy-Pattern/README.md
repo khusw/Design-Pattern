@@ -10,10 +10,13 @@
 - 즉, 서로 다른 객체가 할 수 있는 행위를 '전략' 이라는 단위로 만들어서,
 행위의 수정이 필요할때, 전략만 바꿔서 행위를 수정하는 방식.
 
+<br>
 
 > 사전 지식 <br>
 1. Interface
 2. Delegation
+
+<br>
 
 > Interface <br>
 
@@ -26,6 +29,7 @@ public interface AInterface {
     void funcA();
 }
 ```
+<br>
 
 ```java
 // 구현
@@ -36,6 +40,7 @@ public class AInterfaceImpl {
     }
 }
 ```
+<br>
 
 ```java
 public class Main {
@@ -46,17 +51,19 @@ public class Main {
    }
 }
 ```
+<br>
 
 > Delegation
 - 위임(Delegation) 이란 어떤 기능에 대해서, 책임소재를 다른 클래스로 떠넘기는 것을 말한다.
  아래의 예제에서, print() 함수의 기능에 대한 책임소재가 AObj 에게 부여하는게 아닌, BObj 에게 전적으로 
  위임한것을 볼 수 있다.
- 
+
  ```java
 public interface BObj {
     void print();
 }
 ```
+<br>
 
 ```java
 public class BObjImpl implements BObj {
@@ -66,6 +73,7 @@ public class BObjImpl implements BObj {
     }
 }
 ```
+<br>
 
 ```java
 public class AObj {
@@ -82,6 +90,7 @@ public class AObj {
     }
 }
 ```
+<br>
 
 ```java
 public class Main {
@@ -91,6 +100,7 @@ public class Main {
     }
 }
 ```
+<br>
 
 > Strategy Pattern
 - 만약 예를들어, 프로그램 요구사항으로, 게임 캐릭터와 무기를 구현해달라는 요구를 받았다고 치면,
@@ -98,12 +108,13 @@ public class Main {
 
 - 즉, 여러개의 무기들 중에서 캐릭터가 자신이 원하는 특정한 무기를 선택하는것은, 자신의 상황에 맞는 어떤 전략을 선택한것으로 볼 수 있다.
 아래는 이에 대한 코드 예제이다.
-
+<br><br>
 ```java
 public interface Weapon {
     void attack();
 }
 ```
+<br>
 
 ```java
 public class Sword implements Weapon{
@@ -113,6 +124,7 @@ public class Sword implements Weapon{
     }
 }
 ```
+<br>
 
 ```java
 public class Bow implements Weapon {
@@ -122,6 +134,7 @@ public class Bow implements Weapon {
     }
 }
 ```
+<br>
 
 ```java
 public class Axe implements Weapon {
@@ -131,6 +144,7 @@ public class Axe implements Weapon {
     }
 }
 ```
+<br>
 
 ```java
 public class Character {
@@ -155,6 +169,7 @@ public class Character {
     }
 }
 ```
+<br>
 
 ```java
 public class Main {
@@ -173,6 +188,7 @@ public class Main {
     }
 }
 ```
+<br>
 
-이를 다이어그램으로 표현한다면 다음과 같을 것이다.
+_이를 다이어그램으로 표현한다면 다음과 같을 것이다_
 ![strategy pattern diagram](https://user-images.githubusercontent.com/47293759/108305842-3f1dba00-71ee-11eb-80d3-f3aaeaa3be89.JPG)

@@ -1,4 +1,4 @@
-# Design-Pattern In Java
+# Design Pattern In Java
 Design Pattern in Java Project with Basic Examples
 
 > Design-Pattern List
